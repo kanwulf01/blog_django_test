@@ -4,6 +4,8 @@ from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 # Register your models here.
 
+#Se instalo plugin import_expor para habilitarlos como usuario admin
+
 class CategoriaResource(resources.ModelResource):
 
     class Meta:
@@ -32,3 +34,4 @@ class AuthorAdmin(ImportExportModelAdmin ,admin.ModelAdmin):
 #register recive 2 parametros nombre del modelo y una clase que herede de categoriaadmin para visualizar instancias del modelo
 admin.site.register(Categoria, CategoriaAdmin)
 admin.site.register(Autor, AuthorAdmin)
+admin.site.register(Post)
