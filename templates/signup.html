@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{%block titulo%}
+Sign Up
+{% endblock titulo %}
+
+{% block imagen %}
+    
+{% endblock imagen %}
+
+{% block titulo_principal %}
+   Sign Up
+{% endblock titulo_principal %}
+
+{% block content %}
+<div class="d-flex justify-content-center">
+
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-info" tipe="submit">Sign Up</button>
+    </form>
+</div>
+{% endblock content %}

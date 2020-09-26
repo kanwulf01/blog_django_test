@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.contrib.auth.forms import UserCreationForm
 # Create your views here.
 
 def home(request):
@@ -20,5 +20,9 @@ def tecnologia(request):
 def videojuegos(request):
     return render(request, 'videojuegos.html')
 
-
+def signup(request):
+    form = UserCreationForm()
+    return render(request, 'signup.html', {
+        'form':form
+    })
 
